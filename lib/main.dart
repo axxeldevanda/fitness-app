@@ -11,6 +11,11 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: OnboardingScreen(),
+      theme: ThemeData(
+        appBarTheme: AppBarTheme(
+          color: Color(0xffFF236F)
+        )
+      ),
     );
   }
 }

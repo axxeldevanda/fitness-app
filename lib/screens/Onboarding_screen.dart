@@ -1,3 +1,4 @@
+import 'package:fitness_app/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 
@@ -51,10 +52,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
       body: IntroductionScreen(
         pages: pages,
         onDone: () {
-          // When done button is press
+          Navigator.pushReplacement(
+              context, MaterialPageRoute(builder: (context) => HomePage()));
         },
         onSkip: () {
-          // You can also override onSkip callback
+          Navigator.pushReplacement(
+              context, MaterialPageRoute(builder: (context) => HomePage()));
         },
         showSkipButton: true,
         skip: Icon(Icons.skip_next),
